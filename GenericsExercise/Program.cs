@@ -55,6 +55,7 @@ namespace GenericsExercise
             // Displays the properties and values of the Stack.
             //**Uncomment the lines below**
 
+            Console.WriteLine("Stack:");
             Console.WriteLine("\tCount:    {0}", myStack.Count);
             Console.Write("\tValues:");
             foreach (var item in myStack)
@@ -77,6 +78,9 @@ namespace GenericsExercise
             myQ.Enqueue("!");
 
             // Displays the properties and values of the Queue.
+
+            Console.WriteLine("");
+            Console.WriteLine("Queue:");
             Console.WriteLine("\tCount:    {0}", myQ.Count);
             Console.Write("\tValues:");
             foreach (var item in myQ)
