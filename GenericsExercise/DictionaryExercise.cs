@@ -7,14 +7,22 @@ namespace GenericsExercise
     {
         public static Dictionary<int, List<string>> GetEmployeesByAge(List<Employee> employees)
         {
+            List<string> name = new List<string>();
+
             var result = new Dictionary<int, List<string>>();
 
             foreach (var e in employees)
             {
-                //TODO: add employes to result, 
-                //      the key must contain age and 
-                //      values are names list who have the same age.
-
+                if (result.ContainsKey(e.Age))
+                {
+                    result[e.Age].Add(e.Name);
+                }
+                else
+                {
+                    result.Add(e.Age, new List<string>()
+                    { e.Name});
+                }
+                Console.WriteLine(e);
             }
             return result;
         }
